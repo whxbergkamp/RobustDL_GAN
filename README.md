@@ -42,7 +42,7 @@ python run_standard_cifar10.py --learning-rate=0.1 --weight-decay=1E-4 --batch-s
 The details of these parameters and command line options can be found in the script **run_standard_cifar.py** and are largely self-explanatory. They can also be directly set in the scripts. Similarly to run adversarial training with PGD, use the script **run_pgd_cifar.py**. 
 
 ```
-python run_pgd_cifar10.py --learning-rate=0.1 --weight-decay=1E-4 --epsilon=0.0625 --batch-size=64 --model-file=model_std_cifar10.ckpt 
+python run_pgd_cifar10.py --learning-rate=0.1 --weight-decay=1E-5 --epsilon=0.0625 --batch-size=64 --model-file=model_pgd_cifar10.ckpt 
 ```
 
 The neural network architecture definitions, for both the generative and discriminative networks, are stored in the folder 'adversarial_networks/models/'. 
@@ -51,7 +51,7 @@ New architectures can be defined and stored in that folder.
 
 To run training with adversarial networks: 
 ```
-python run_gan_cifar10.py --learning-rate=0.1 --weight-decay=1E-4 --epsilon=0.0625 --batch-size=64 --model-file=model_std_cifar10.ckpt 
+python run_gan_cifar10.py --learning-rate=0.1 --weight-decay=1E-5 --epsilon=0.0625 --batch-size=64 --model-fileD=modelD_gan_cifar10.ckpt --model-fileG=modelG_gan_cifar10.ckpt 
 ```
 
 
